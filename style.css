@@ -1,0 +1,77 @@
+/* Center-align all content in the body */
+body {
+    text-align: center;
+    background-color: #f3f3f3; /* Light background for better contrast */
+}
+
+/* Style for each button with a circular border and consistent size */
+.btn {
+    width: 200px;
+    height: 200px;
+    border: 8px solid #333; /* Dark border for a sharper look */
+    border-radius: 18%; /* Slightly rounded edges */
+    margin: 1.4rem; /* Spacing between buttons */
+    transition: transform 0.1s ease; /* Add a slight scale effect on click */
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center; /* Center all buttons in a row */
+}
+
+/* Define primary button colors with a visually appealing palette */
+.red {
+    background-color: #ff6666; /* Soft red for an engaging look */
+}
+
+.green {
+    background-color: #66ff66; /* Soft green for a calm effect */
+}
+
+.yellow {
+    background-color: #ffff99; /* Light yellow for a softer effect */
+}
+
+.purple {
+    background-color: #9999ff; /* Light purple for a balanced look */
+}
+
+/* Flash effect for clicked buttons */
+.flash {
+    animation: flashEffect 0.4s ease-in-out;
+}
+
+/* Keyframes for the flash effect animation */
+@keyframes flashEffect {
+    0% {
+        background-color: aliceblue; /* Light flash start */
+    }
+    50% {
+        background-color: #ffffff; /* Bright white flash */
+    }
+    100% {
+        background-color: aliceblue; /* Return to starting color */
+    }
+}
+
+
+.uflash {
+    background-color: #575757; 
+}
+
+/* Optional hover effect for buttons */
+.btn:hover {
+    /* transform: scale(1.05); Slightly scale the button on hover */
+    cursor: pointer; /* Show pointer cursor to indicate interactivity */
+}
+
+
+@media (max-width: 768px) {
+    .btn {
+        width: 100px;
+        height: 100px;
+    }
+    .btn-container {
+        flex-wrap: wrap;
+    }
+}
